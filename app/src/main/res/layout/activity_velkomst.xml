@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_velkomst"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.dtu.jacopomattia.a1foersteapp.Velkomst">
+
+    <TextView
+        android:text="Gæt et tal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:id="@+id/textView2"
+        android:textSize="30sp"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:text="Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonReset"
+        android:layout_alignBaseline="@+id/buttonOK"
+        android:layout_alignBottom="@+id/buttonOK"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="45dp" />
+
+    <Button
+        android:text="OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonOK"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="54dp"
+        android:layout_below="@+id/editTextGæt"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextGæt"
+        android:singleLine="false"
+        android:selectAllOnFocus="false"
+        android:layout_marginTop="53dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:textColor="?attr/colorBackgroundFloating" />
+
+    <Button
+        android:text="er du fult izy brizzy?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttondifficulty"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/buttonReset"
+        android:layout_centerHorizontal="true" />
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:id="@+id/webview"
+        android:layout_row="16"
+        android:layout_column="0"
+        android:layout_below="@+id/buttondifficulty"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="11dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
