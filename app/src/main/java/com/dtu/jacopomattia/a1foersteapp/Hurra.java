@@ -21,19 +21,18 @@ public class Hurra extends Fragment implements Runnable {
     //static Hurra aktivitetDerVisesNu = null;
     Handler handler = new Handler();
     private int diff;
-
+    private ImageView iv;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //super.onCreate(savedInstanceState);
-
 
         //Intent i = getIntent();
         diff = getArguments().getInt("sværhed");
 
 
 
-        ImageView iv = new ImageView(getActivity());
+        iv = new ImageView(getActivity());
         iv.setImageResource(R.mipmap.scarface_happy);
         //iv.startAnimation(AnimationUtils.loadAnimation(this, R.anim.egen_anim));
         //setContentView(iv); -- Til aktivitet
@@ -61,7 +60,7 @@ public class Hurra extends Fragment implements Runnable {
 
         getFragmentManager().beginTransaction()
                 .setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
-                .replace(R.id.fragmentos, fragment)  // tom container i layout
+                .replace(R.id.fragmentos, fragment).add(R.id.fragmentImageSwitcher, new ScarfaceBaggrund())  // tom container i layout
                 .commit();
     }
 }

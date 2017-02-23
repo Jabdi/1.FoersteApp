@@ -25,14 +25,17 @@ public class Start extends Fragment implements Runnable{
 
         //static Start aktivitetDerVisesNu = null; -- til aktivitet
         Handler handler = new Handler();
+        private ImageView iv;
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             // super.onCreate(savedInstanceState); --- til aktivitet
             Log.d("Start fragment", "Det kører bare");
+            //View rod = inflater.inflate(R.layout.activity_velkomst, container, false);
 
+            iv = new ImageView(getActivity());
+            //iv = (ImageView) rod.findViewById(R.id.SplashStartScarface);
 
-            ImageView iv = new ImageView(getActivity());
             iv.setImageResource(R.mipmap.scarface);
             iv.startAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.egen_anim));
             // setContentView(iv); -- til Aktivitet
@@ -53,10 +56,10 @@ public class Start extends Fragment implements Runnable{
 //            aktivitetDerVisesNu.finish();  // <2> Luk velkomsaktiviteten
 //            aktivitetDerVisesNu = null;
 // ------------------------------------------------------------------------------------Til aktivitet, følgende til fragment
-            Fragment fragment = new Velkomst();
+
             getFragmentManager().beginTransaction()
                     .setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
-                    .replace(R.id.fragmentos, fragment)  // tom container i layout
+                    .replace(R.id.fragmentos, new Velkomst()).add(R.id.fragmentImageSwitcher, new ScarfaceBaggrund())  // tom container i layout
                     .commit();
         }
 

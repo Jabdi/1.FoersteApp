@@ -34,9 +34,7 @@ import java.util.Random;
 
 public class Velkomst extends Fragment implements View.OnClickListener, Runnable  {
 
-    private Button b;
-    private Button bReset;
-    private Button bIzzy;
+    private Button b, bReset, bIzzy;
     private EditText gæt;
     private TextView Titel;
     private Random rand;
@@ -125,7 +123,7 @@ public class Velkomst extends Fragment implements View.OnClickListener, Runnable
                     Bundle arg = new Bundle();
                     arg.putInt("sværhed", diff);
                     f.setArguments(arg);
-
+                    getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(R.id.fragmentImageSwitcher)).commit();
                     getFragmentManager().beginTransaction().replace(R.id.fragmentos, f).commit();
 
                 } else if (gættet < tallet) {

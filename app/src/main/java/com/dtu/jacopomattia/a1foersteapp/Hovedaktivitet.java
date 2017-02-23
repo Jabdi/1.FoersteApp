@@ -30,7 +30,7 @@ import android.widget.ViewSwitcher;
     public class Hovedaktivitet extends AppCompatActivity {
 
     static MediaPlayer mp;
-    private ImageSwitcher imageSwitcher;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,33 +38,6 @@ import android.widget.ViewSwitcher;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragtment_layout);
 
-        //-------------------------- ImageSwitcher Set-up ------------------------- Start
-        imageSwitcher = (ImageSwitcher) findViewById(R.id.imageSwitcher1);
-        imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
-            @Override
-            public View makeView() {
-                ImageView imageview = new ImageView(getApplicationContext());
-                imageview.setScaleType((ImageView.ScaleType.FIT_CENTER));
-                return imageview;
-            }
-        });
-        Animation in = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
-        Animation out = AnimationUtils.loadAnimation(this, android.R.anim.slide_out_right);
-        imageSwitcher.setInAnimation(in);
-        imageSwitcher.setOutAnimation(out);
-        imageSwitcher.postDelayed(new Runnable() {
-            int i = 0;
-
-            public void run() {
-                imageSwitcher.setImageResource(
-                        i++ % 2 == 0 ?
-                                R.mipmap.scarface :
-                                R.mipmap.scarface_happy);
-                imageSwitcher.postDelayed(this, 4000);
-
-            }
-        }, 1000);
-        //-------------------------- ImageSwitcher Set-up ------------------------- DONE
 
         // --------MUSIC-------- Set-up af Mediaplayer og Afspilning af baggrundsmusik
 
@@ -81,6 +54,7 @@ import android.widget.ViewSwitcher;
         // --------MUSIC--------- Musikafspiller initialiseret
 
         if (savedInstanceState == null) {
+
             Fragment fragment = new Start();
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.fragmentos, fragment)  // tom container i layout

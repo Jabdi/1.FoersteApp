@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/spiller_Tony"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Tony" />
+        <item
+            android:id="@+id/spiller_Manny"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Manny" />
+        <item
+            android:id="@+id/spiller_Sosa"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Sosa" />
+    </group>
+
+    <item android:title="Egne Profiler">
+        <menu>
+            <item
+                android:id="@+id/spiller_1"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Spiller 1" />
+            <item
+                android:id="@+id/spiller_create_new"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Ny Spiller" />
+        </menu>
+    </item>
+
+</menu>
