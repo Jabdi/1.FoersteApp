@@ -77,7 +77,7 @@ public class Velkomst extends Fragment implements View.OnClickListener, Runnable
         bReset.setEnabled(false);
 
 
-
+        //skaf data fra andet fragment
         try {
 //            Intent i = getIntent();
 //            diff = i.getExtras().getInt("sværhed"); ------- Til aktivitet
