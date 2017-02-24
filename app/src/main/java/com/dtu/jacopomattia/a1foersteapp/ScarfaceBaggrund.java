@@ -56,6 +56,7 @@ public class ScarfaceBaggrund extends Fragment {
                 //-------------------------- ImageSwitcher Set-up ------------------------- DONE
 
 
+
         // Hvis savedInstanceState ikke er null er det en fragmentet  ved at blive genstartet
 //        if (savedInstanceState == null) {
 //            handler.postDelayed(getActivity(), 3000); // <1> Kør run() om 3 sekunder

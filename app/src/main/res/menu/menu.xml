@@ -9,6 +9,11 @@
         android:showAsAction="never"
         android:title="Indstillinger" />
     <item
+        android:id="@+id/Musik"
+        android:icon="@android:drawable/ic_lock_silent_mode_off"
+        android:showAsAction="never"
+        android:title="Musik"/>
+    <item
         android:id="@+id/afslut"
         android:icon="@android:drawable/ic_delete"
         android:showAsAction="never"

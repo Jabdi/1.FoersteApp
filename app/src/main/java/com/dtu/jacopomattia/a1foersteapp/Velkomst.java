@@ -3,6 +3,7 @@ package com.dtu.jacopomattia.a1foersteapp;
 import android.app.Activity;
 import java.lang.Runnable;
 
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -73,6 +74,9 @@ public class Velkomst extends Fragment implements View.OnClickListener, Runnable
         gæt.setEnabled(true);
         b.setEnabled(true);
         bReset.setEnabled(false);
+
+        Hovedaktivitet h = new Hovedaktivitet();
+        h.visLydKnap();
 
 
         //skaf data fra andet fragment test

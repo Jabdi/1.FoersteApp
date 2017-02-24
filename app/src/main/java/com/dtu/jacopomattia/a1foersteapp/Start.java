@@ -59,8 +59,10 @@ public class Start extends Fragment implements Runnable{
 
             getFragmentManager().beginTransaction()
                     .setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
-                    .replace(R.id.fragmentos, new Velkomst()).add(R.id.fragmentImageSwitcher, new ScarfaceBaggrund())  // tom container i layout
+                    .replace(R.id.fragmentos, new Velkomst())  // tom container i layout
                     .commit();
+            getFragmentManager().beginTransaction()
+                    .add(R.id.fragmentImageSwitcher, new ScarfaceBaggrund()).commit();
         }
 
         /**
